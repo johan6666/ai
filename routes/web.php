@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ChatController;
+use App\Http\Controllers\AnalyticController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,8 @@ Route::post('/chat', [ChatController::class, 'chat']);
 // --- RUTE BARU UNTUK REKOMENDASI ---
 Route::get('/recommendation', [ChatController::class, 'recommendationIndex']);
 Route::post('/generate-recommendation', [ChatController::class, 'generateRecommendation']);
+
+
+// analisi python
+Route::get('/analysis-dashboard', [AnalyticController::class, 'showAnalysisDashboard']);
+
